@@ -39,22 +39,19 @@ namespace MetaTraderToCryptact
 
                 var sw = new StreamWriter(OutputName);//書き込みファイル
 
-                //1行目に書き込み
+                
 
              //クリプタクトのカスタムファイルの形式
              //Timestamp,Action,Source,Base,Volume,Price,Counter,Fee,FeeCcy,Comment
-            //（時間、売買、入力ソース、通貨、量、価格、相手通貨、手数料、手数料通貨、コメント）
-     
-     
+            //（時間、売買、入力ソース、通貨、量、価格、相手通貨、手数料、手数料通貨、コメント 
                 sw.WriteLine("Timestamp,Action,Source,Base,Volume,Price,Counter,Fee,FeeCcy,Comment");
              
                 Console.WriteLine("start");
-
-                int count = 0;//取引数カウント
+                //取引数カウント
+                int count = 0;
       
                 //ヘッダ部分を読み飛ばす
                 for (int i = 0; i < 7; i++) sr.ReadLine();
-
 
                 while (sr.Peek() >= 0)
                 {
